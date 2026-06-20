@@ -1,6 +1,5 @@
 <div align="center">
 <img src="assets/icons/rocket.svg" width="38" alt="" />
-
 <h1>Emoji-Scrapr</h1>
 
 <sub>rip every emoji, sticker, role icon, and banner off a Discord server in one go</sub>

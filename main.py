@@ -15,9 +15,10 @@ load_dotenv()
 IS_BOT = True
 
 # Your target server/guild ID.
-SERVER_ID = "1370351288079876147"
+SERVER_ID = "target server id"
 
-# To hardcode instead: TOKEN = "your_token_here"
+# To securely set it: open your .env file and follow the instructions there.
+# Or If you want to hardcode instead: TOKEN = "your_token_here"
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 RETRY_LIMIT = 3

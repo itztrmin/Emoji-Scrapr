@@ -93,6 +93,8 @@ Name collisions get the asset ID appended — nothing ever overwrites silently.
 - Never commit your `.env`. It's already gitignored — keep it that way.
 - Provided as-is, no warranty. See [`LICENSE`](LICENSE).
 
+#### This repository is in no way affiliated with, authorized, maintained, sponsored, or endorsed by Discord Inc. (discord.com) or any of its affiliates or subsidiaries.
+
 <br>
 
 <div align="center">

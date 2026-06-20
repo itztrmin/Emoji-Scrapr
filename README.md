@@ -1,4 +1,4 @@
-# Emoji-Scrapr
+# Emoji Scrapr
 
 rip every emoji, sticker, role icon, and banner off a Discord server in one go
 

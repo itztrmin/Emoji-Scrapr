@@ -1,4 +1,3 @@
-
 <div align="center">
 <img src="assets/icons/rocket.svg" width="38" alt="" />
 
@@ -60,6 +59,8 @@ No token yet? See **Getting a token** below.
 
 **User token — your account, your risk**
 Discord in browser → `F12` → Network tab → click a channel → grab `Authorization` from the request headers.
+
+> Either way — the bot or account behind that token has to actually be **in** the server you're targeting. It can't read a server it hasn't joined.
 
 `SERVER_ID` comes from right-clicking the server icon in Discord (needs Developer Mode on in settings).
 

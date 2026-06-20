@@ -1,14 +1,11 @@
-<div align="center">
-<img src="assets/icons/rocket.svg" width="38" alt="" />
-<h1>Emoji-Scrapr</h1>
+# Emoji-Scrapr
 
-<sub>rip every emoji, sticker, role icon, and banner off a Discord server in one go</sub>
+rip every emoji, sticker, role icon, and banner off a Discord server in one go
 
-<a href="LICENSE"><img alt="license" src="https://img.shields.io/github/license/itztrmin/Emoji-Scrapr?style=for-the-badge&labelColor=2b2d31&color=5865F2"></a>
-<a href="https://github.com/itztrmin/Emoji-Scrapr/commits/main"><img alt="last commit" src="https://img.shields.io/github/last-commit/itztrmin/Emoji-Scrapr?style=for-the-badge&labelColor=2b2d31&color=57F287"></a>
-<a href="https://www.python.org/"><img alt="python" src="https://img.shields.io/badge/python-3.10%2B-2b2d31?style=for-the-badge&labelColor=2b2d31&color=EB459E"></a>
-<a href="https://github.com/itztrmin/Emoji-Scrapr/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/itztrmin/Emoji-Scrapr?style=for-the-badge&labelColor=2b2d31&color=FEE75C"></a>
-</div>
+[![license](https://img.shields.io/github/license/itztrmin/Emoji-Scrapr?style=for-the-badge&labelColor=2b2d31&color=5865F2)](LICENSE)
+[![last commit](https://img.shields.io/github/last-commit/itztrmin/Emoji-Scrapr?style=for-the-badge&labelColor=2b2d31&color=57F287)](https://github.com/itztrmin/Emoji-Scrapr/commits/main)
+[![python](https://img.shields.io/badge/python-3.10%2B-2b2d31?style=for-the-badge&labelColor=2b2d31&color=EB459E)](https://www.python.org/)
+[![stars](https://img.shields.io/github/stars/itztrmin/Emoji-Scrapr?style=for-the-badge&labelColor=2b2d31&color=FEE75C)](https://github.com/itztrmin/Emoji-Scrapr/stargazers)
 
 > [!WARNING]
 > User tokens break Discord's ToS. Other people's emojis aren't yours to redistribute. Also — [never share your token with anyone](#getting-a-token), ever. Read **Disclaimers** before running this on a server you don't own.
@@ -18,6 +15,12 @@
 icon · banner · splash · emojis (static + animated) · stickers (image + lottie) · role icons
 ```
 One script, one token, one server ID. Pulls everything above at max resolution, sorts it into folders, writes a `manifest.json` so re-runs only grab what's new or changed.
+
+- Full resolution downloads, no Discord CDN compression tricks
+- Skips files it already has — re-running only grabs what's new
+- Static and animated emojis sorted into their own folders automatically
+- Works with either a bot token or a user token
+- Zero setup beyond pasting in a token and a server ID
 
 ## Quick start
 
@@ -51,7 +54,7 @@ done in 3.41s  →  ./cloned_My Cool Server
 
 No token yet? See **Getting a token** below.
 
-## <img src="assets/icons/key.svg" width="20" alt="" valign="middle" /> Getting a token
+## Getting a token
 
 **Bot — use this one**
 [Developer Portal](https://discord.com/developers/applications) → New App → **Bot** tab → Reset Token → enable **Server Members Intent** → invite it to the server.
@@ -63,22 +66,10 @@ Discord in browser → `F12` → Network tab → click a channel → grab `Autho
 
 `SERVER_ID` comes from right-clicking the server icon in Discord (needs Developer Mode on in settings).
 
-<br>
-
-<div align="center">
-
-<img src="assets/icons/warning.svg" width="22" alt="" />
-
-**DO NOT GIVE YOUR TOKEN TO ANYONE**
-
-Not a "token checker" bot. Not a giveaway site. Not a friend asking nicely.
-Your token skips the login screen entirely — no password, no 2FA, no prompt. Anyone holding it *is* you, as far as Discord's API is concerned.
-
-If yours ever leaks: regenerate it from the Developer Portal (bot) or change your password (user) — that's the only thing that actually kills a leaked token.
-
-</div>
-
-<br>
+> [!CAUTION]
+> **Do not give your token to anyone.** Not a "token checker" bot, not a giveaway site, not a friend asking nicely.
+> It skips the login screen entirely — no password, no 2FA, no prompt. Whoever has it *is* you, as far as Discord's API is concerned.
+> If it leaks: regenerate it from the Developer Portal (bot) or change your password (user). That's the only real fix.
 
 ## Output
 ```
@@ -91,22 +82,22 @@ cloned_<server>/
 ```
 Name collisions get the asset ID appended — nothing overwrites silently.
 
-## <img src="assets/icons/checklist.svg" width="20" alt="" valign="middle" /> Roadmap
+## Roadmap
 - [ ] CLI args instead of editing `main.py` by hand
 - [ ] `--only emojis` / `--skip stickers` filtering
 - [ ] Configurable concurrency for big servers
 - [ ] Auto-zip the output folder
 - [ ] Lottie → preview render instead of raw `.json`
 
-## <img src="assets/icons/warning.svg" width="20" alt="" valign="middle" /> Disclaimers
+## Disclaimers
 - Self-bots / user tokens violate Discord ToS — accounts get warned, locked, or banned. Bot tokens exist for a reason.
 - Not affiliated with Discord Inc. in any way.
 - Only scrape servers you own or have permission to scrape — emojis and stickers belong to whoever made them.
 - Never commit your `.env`. It's already gitignored — keep it that way.
 - Provided as-is, no warranty. See [`LICENSE`](LICENSE).
 
-<sub>This repository is in no way affiliated with, authorized, maintained, sponsored, or endorsed by Discord Inc. or any of its affiliates or subsidiaries.</sub>
+---
 
-<div align="center">
-<sub>★ star it if it saved you the trouble — <a href="https://github.com/itztrmin">@itztrmin</a></sub>
-</div>
+This repository is in no way affiliated with, authorized, maintained, sponsored, or endorsed by Discord Inc. or any of its affiliates or subsidiaries.
+
+★ star it if it saved you the trouble — [@itztrmin](https://github.com/itztrmin)

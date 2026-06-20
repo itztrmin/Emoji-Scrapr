@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Config: Edit these three values directly in code.
+# Config: Edit these three values.
 
 # True = bot token  (normal bot accounts)
 # False = user token (use at your own risk)

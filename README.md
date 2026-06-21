@@ -1,4 +1,4 @@
-# Emoji Scrapr
+# Emoji <u>Scrapr</u>
 
 rip every emoji, sticker, role icon, and banner off a Discord server in one go
 
@@ -83,11 +83,11 @@ cloned_<server>/
 Name collisions get the asset ID appended — nothing overwrites silently.
 
 ## Roadmap
-- [ ] CLI args instead of editing `main.py` by hand
-- [ ] `--only emojis` / `--skip stickers` filtering
-- [ ] Configurable concurrency for big servers
-- [ ] Auto-zip the output folder
-- [ ] Lottie → preview render instead of raw `.json`
+- CLI args instead of editing `main.py` by hand
+- `--only emojis` / `--skip stickers` filtering
+- Configurable concurrency for big servers
+- Auto-zip the output folder
+- Lottie → preview render instead of raw `.json`
 
 ## Disclaimers
 - Self-bots / user tokens violate Discord ToS — accounts get warned, locked, or banned. Bot tokens exist for a reason.
